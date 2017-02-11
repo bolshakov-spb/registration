@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Регистрация</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-xs-6">
+            <h2>Регистрация</h2>
+        </div>
+        <div class="col-md-6 col-xs-6">
+            <a class="pull-right" href="/login.html">Я уже зарегистрирован</a>
+        </div>
+    </div>
+    <form class="form-horizontal" id="registerform" method="post" action="register.php">
+        <div class="form-group">
+            <div class="alert alert-danger hidden">
+                Это поле не может содержать менее 2 символов!
+            </div>
+            <label class="control-label col-xs-3 col-md-2" for="lastname">* Фамилия:</label>
+            <div class="col-xs-9 col-md-10">
+                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Введите фамилию">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="alert alert-danger hidden">
+                Это поле не может содержать менее 2 символов!
+            </div>
+            <label class="control-label col-xs-3 col-md-2" for="firstname">* Имя:</label>
+            <div class="col-xs-9 col-md-10">
+                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Введите имя">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">* Дата рождения:</label>
+            <div class="col-xs-3 col-md-2">
+                <select class="form-control" name="year">
+                    <option value="0">Год</option>
+                </select>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <select class="form-control" name="month" disabled>
+                    <option value="0">Месяц</option>
+                </select>
+            </div>
+            <div class="col-xs-3  col-md-2">
+                <select class="form-control" name="day" disabled>
+                    <option value="0">День</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="alert alert-danger hidden">
+                Введите корректный адрес электронной почты!
+            </div>
+            <label class="control-label col-xs-3 col-md-2" for="inputemail">* Email:</label>
+            <div class="col-xs-9 col-md-10">
+                <input type="email" class="form-control" name="inputemail" id="inputemail" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="alert alert-danger hidden">
+                Пароль не может быть короче 6 символов!
+            </div>
+            <label class="control-label col-xs-3 col-md-2" for="inputpassword">* Пароль:</label>
+            <div class="col-xs-9 col-md-10">
+                <input type="password" class="form-control" name="inputpassword" id="inputpassword"
+                       placeholder="Введите пароль">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="alert alert-danger hidden">
+                Пароли не совпадают!
+            </div>
+            <label class="control-label col-xs-3 col-md-2" for="confirmpassword">* Подтвердите пароль:</label>
+            <div class="col-xs-9 col-md-10">
+                <input type="password" class="form-control" name="confirmpassword" id="confirmpassword"
+                       placeholder="Введите пароль ещё раз">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2" for="address">Адрес:</label>
+            <div class="col-xs-9 col-md-10">
+                <textarea rows="3" class="form-control" name="address" id="address"
+                          placeholder="Введите адрес"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">* Пол:</label>
+            <div class="col-xs-2">
+                <label class="radio-inline">
+                    <input type="radio" checked name="genderRadios" value="0"> Мужской
+                </label>
+            </div>
+            <div class="col-xs-2">
+                <label class="radio-inline">
+                    <input type="radio" name="genderRadios" value="1"> Женский
+                </label>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary pull-right" value="Регистрация">
+    </form>
+</div>
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/custom.js"></script>
+</body>
+</html>

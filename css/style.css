@@ -1,0 +1,22 @@
+.control-label {
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+a {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.auth-form {
+    margin-top: 30vh;
+}
+
+.form-group {
+    padding-left: 15px;
+}
+
+.alert {
+    margin-right: 15px;
+}
